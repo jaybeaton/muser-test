@@ -118,6 +118,7 @@
         }
     },
     "extra": {
+        "installer-name": "muser",
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
