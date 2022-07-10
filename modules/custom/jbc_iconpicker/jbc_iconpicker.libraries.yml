@@ -1,0 +1,20 @@
+fontawesome-css:
+  css:
+    component:
+      /libraries/font-awesome5/css/all.min.css: { minified: true }
+      css/fab-fix.css: {}
+
+fontawesome-iconpicker:
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+    - jbc_iconpicker/fontawesome-css
+  css:
+    component:
+      /libraries/fontawesome-iconpicker/dist/css/fontawesome-iconpicker.min.css: {minified: true }
+      css/fontawesome_iconpicker.css: {}
+  js:
+    /libraries/fontawesome-iconpicker/dist/js/fontawesome-iconpicker.min.js: {minified: true }
+    js/fontawesome_iconpicker.js: {}

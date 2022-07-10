@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: student
+label: Student
+weight: 5
+is_admin: null
+permissions:
+  - 'flag favorites'
+  - 'unflag favorites'

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hours per week'
+vid: hours
+description: 'The number of hours per week required for projects.'
+weight: 0

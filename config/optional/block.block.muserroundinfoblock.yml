@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - muser_system
+    - system
+  theme:
+    - muser_base
+id: muserroundinfoblock
+theme: muser_base
+region: content
+weight: -9
+provider: null
+plugin: muser_round_info_block
+settings:
+  id: muser_round_info_block
+  label: 'Muser round info block'
+  label_display: '0'
+  provider: muser_system
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

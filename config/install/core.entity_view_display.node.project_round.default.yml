@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project_round.field_project
+    - field.field.node.project_round.field_round
+    - node.type.project_round
+  module:
+    - entity_reference_revisions
+    - user
+id: node.project_round.default
+targetEntityType: node
+bundle: project_round
+mode: default
+content:
+  field_project:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: teaser
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_round:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  flag_favorites:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

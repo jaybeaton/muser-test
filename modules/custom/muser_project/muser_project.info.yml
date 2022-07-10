@@ -1,0 +1,7 @@
+name: Muser Project
+type: module
+description: Muser Project module.
+core_version_requirement: ^8 || ^9
+package: Muser
+dependencies:
+  - muser_system

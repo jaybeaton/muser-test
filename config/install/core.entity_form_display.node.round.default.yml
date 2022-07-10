@@ -1,0 +1,264 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.round.field_accept_applications
+    - field.field.node.round.field_accepted_student_email
+    - field.field.node.round.field_after_round_email
+    - field.field.node.round.field_apply
+    - field.field.node.round.field_contract_end_mentor_mail
+    - field.field.node.round.field_contract_end_studnt_mail
+    - field.field.node.round.field_contract_start_mentor_mail
+    - field.field.node.round.field_contract_start_studnt_mail
+    - field.field.node.round.field_is_current
+    - field.field.node.round.field_num_app_per_student
+    - field.field.node.round.field_post_projects
+    - field.field.node.round.field_post_projects_end_email
+    - field.field.node.round.field_post_projects_start_email
+    - field.field.node.round.field_rejected_student_email
+    - field.field.node.round.field_review_apps_end_email
+    - field.field.node.round.field_review_apps_start_email
+    - field.field.node.round.field_sign_contracts
+    - field.field.node.round.field_start_date
+    - node.type.round
+  module:
+    - datetime
+    - datetime_range
+    - datetimehideseconds
+    - field_group
+    - path
+third_party_settings:
+  field_group:
+    group_dates:
+      children:
+        - field_start_date
+        - field_post_projects
+        - field_apply
+        - field_accept_applications
+        - field_sign_contracts
+      label: Dates
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        required_fields: false
+    group_emails:
+      children:
+        - field_post_projects_start_email
+        - field_post_projects_end_email
+        - field_review_apps_start_email
+        - field_review_apps_end_email
+        - field_after_round_email
+        - field_accepted_student_email
+        - field_rejected_student_email
+        - field_contract_start_mentor_mail
+        - field_contract_start_studnt_mail
+        - field_contract_end_mentor_mail
+        - field_contract_end_studnt_mail
+      label: Emails
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        required_fields: true
+id: node.round.default
+targetEntityType: node
+bundle: round
+mode: default
+content:
+  contracts_warning:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_accept_applications:
+    type: daterange_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
+  field_accepted_student_email:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_after_round_email:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_apply:
+    type: daterange_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
+  field_contract_end_mentor_mail:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_contract_end_studnt_mail:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_contract_start_mentor_mail:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_contract_start_studnt_mail:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_is_current:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_num_app_per_student:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_post_projects:
+    type: daterange_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
+  field_post_projects_end_email:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_post_projects_start_email:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_rejected_student_email:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_review_apps_end_email:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_review_apps_start_email:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_sign_contracts:
+    type: daterange_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
+  field_start_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

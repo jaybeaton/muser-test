@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.basic_contact_form
+  module:
+    - contact_block
+    - system
+  theme:
+    - muser_base
+id: muser_base_contactblock
+theme: muser_base
+region: content
+weight: -4
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact block'
+  label_display: '0'
+  provider: contact_block
+  contact_form: basic_contact_form
+  form_display: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /contact-us

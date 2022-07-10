@@ -1,0 +1,104 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - muser_project
+id: muser-project-application-review
+label: 'Application review page'
+module: muser_project
+routes:
+  -
+    route_name: view.applications.page_new
+  -
+    route_name: view.applications.page_review
+  -
+    route_name: view.applications.page_accepted
+  -
+    route_name: view.applications.page_rejected
+tips:
+  application-review-main:
+    id: application-review-main
+    plugin: text
+    label: 'List of applications'
+    weight: 1
+    body: 'View and review all <b>Applications</b> that Students have submitted for your projects.'
+  application-review-new:
+    id: application-review-new
+    plugin: text
+    label: 'New applications'
+    weight: 2
+    selector: '.block-local-tasks-block .tabs li:nth-of-type(1)'
+    body: 'Here you will find application essays from students interested in your project. The essays are "blind" in that you will not see the names of the applicants.'
+  application-review-in-review:
+    id: application-review-in-review
+    plugin: text
+    label: 'Application review'
+    weight: 3
+    selector: '.block-local-tasks-block .tabs li:nth-of-type(2)'
+    body: 'Personal and academic information for students chosen for review is found here. You may assess their transcripts, resume and personal statement, and ensure they meet any additional requirements (class year, work study status, etc.).<br/><br/>After review, you may change the applicant’s status to "Rejected" or "Accepted".'
+  application-review-accepted:
+    id: application-review-accepted
+    plugin: text
+    label: 'Accepted applications'
+    weight: 4
+    selector: '.block-local-tasks-block .tabs li:nth-of-type(3)'
+    body: 'Here are the applications of students you have chosen for your projects. They will be informed of your decision, but their contact information is included should you want to reach out directly.'
+  application-review-rejected:
+    id: application-review-rejected
+    plugin: text
+    label: 'Rejected applications'
+    weight: 5
+    selector: '.block-local-tasks-block .tabs li:nth-of-type(4)'
+    body: 'Here are the applications of students you have not chosen for your projects. They will be informed of your decision, but their contact information is included.'
+  application-review-filters:
+    id: application-review-filters
+    plugin: text
+    label: 'Project filter'
+    weight: 6
+    selector: '.view-filters details'
+    body: 'If you have more than one project, you may filter applications by project.'
+  application-review-applications:
+    id: application-review-applications
+    plugin: text
+    label: Applications
+    weight: 7
+    selector: '.view-applications article'
+    body: 'All applications are listed here in a collapsed format.'
+  application-review-toggle:
+    id: application-review-toggle
+    plugin: text
+    label: 'View the application'
+    weight: 8
+    position: left-start
+    selector: '.views-row article .toggle-application'
+    body: 'Select the caret to open and view the entire application. Select it again to close the application.'
+  application-review-status:
+    id: application-review-status
+    plugin: text
+    label: 'Application status'
+    weight: 9
+    position: left-start
+    selector: '.views-row article .application-status'
+    body: 'The status of each application is shown here.'
+  application-review-essay:
+    id: application-review-essay
+    plugin: text
+    label: 'Applicant essay'
+    weight: 10
+    selector: '.views-row article .field--name-field-essay'
+    body: 'The applicant''s essay is shown in full.'
+  application-review-info:
+    id: application-review-info
+    plugin: text
+    label: 'Applicant information'
+    weight: 11
+    selector: '.views-row article .applicant-info'
+    body: 'Once you''ve reviewed the application essay and changed the status, you will see more information about the applicant.'
+  application-review-status-change:
+    id: application-review-status-change
+    plugin: text
+    label: 'Change status'
+    weight: 12
+    position: left-start
+    selector: '.views-row article .application__status-change'
+    body: 'After reviewing the application, you may select the button to change the status of the application to "In review" where you''ll see more information about the applicant, "Rejected", or "Accepted".'

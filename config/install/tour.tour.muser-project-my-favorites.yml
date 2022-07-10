@@ -1,0 +1,77 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - muser_project
+id: muser-project-my-favorites
+label: 'My favorites page'
+module: muser_project
+routes:
+  -
+    route_name: view.my_favorites.page
+tips:
+  my-favorites-main:
+    id: my-favorites-main
+    plugin: text
+    label: 'My applications'
+    weight: 1
+    body: 'View all of the <b>Projects</b> that you have added to your list of Favorites and submit your applications here.'
+  my-favorites-info-block:
+    id: my-favorites-info-block
+    plugin: text
+    label: 'Information block'
+    weight: 2
+    selector: .block-muser-application-count
+    body: 'Here you''ll see the dates for the application period along with the number of applications you''ve submitted.'
+  my-favorites-list:
+    id: my-favorites-list
+    plugin: text
+    label: 'List of favorites'
+    weight: 3
+    position: top-start
+    selector: .view-content
+    body: 'If you''ve favorited any projects, you''ll seem them listed here in a collapsed format.'
+  my-favorites-details-bar:
+    id: my-favorites-details-bar
+    plugin: text
+    label: 'Details bar'
+    weight: 4
+    selector: .details-bar
+    body: 'Check how many spots are open in each project and how many people have already applied. See how many hours you''ll be required to work and if there is a possibility for extra time.'
+  my-favorites-toggle:
+    id: my-favorites-toggle
+    plugin: text
+    label: 'View your application'
+    weight: 5
+    position: left-start
+    selector: '.node--type-project .toggle-application'
+    body: 'Select the caret to open and view your application and write your essay. Select it again to close.'
+  my-favorites-view-more:
+    id: my-favorites-view-more
+    plugin: text
+    label: 'View the project'
+    weight: 6
+    selector: '.node--type-project .view-more'
+    body: 'Select the "View more" link to see full details about the project.'
+  my-favorites-icons:
+    id: my-favorites-icons
+    plugin: text
+    label: Status
+    weight: 7
+    position: left-start
+    selector: '.node--type-project .project__application-status'
+    body: 'Here you can remove the project from your list of Favorites. If you''ve submitted the application, you''ll also see its status. Keep in mind that all applications with be "Pending" until the review period ends.'
+  my-favorites-essay-guidelines:
+    id: my-favorites-essay-guidelines
+    plugin: text
+    label: 'Essay guidelines'
+    weight: 8
+    selector: .essay-guidelines
+    body: 'Select the link to get tips on writing your essay.'
+  my-favorites-essay:
+    id: my-favorites-essay
+    plugin: text
+    label: 'Write your essay'
+    weight: 9
+    selector: '.node--type-project .form-actions'
+    body: 'Write your essay and submit your application. You may also save your application as a draft and submit it later. After submitting your application, you may withdraw it before the application period ends, if you choose.'

@@ -1,0 +1,112 @@
+name: Muser
+type: profile
+description: 'A Drupal installation profile for Muser sites.'
+core_version_requirement: ^8 || ^9
+version: '9.x-dev'
+
+distribution:
+  name: Muser
+
+# Required modules.
+dependencies:
+  # Core modules.
+  - automated_cron
+  - big_pipe
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - config
+  - contact
+  - datetime
+  - datetime_range
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - help
+  - history
+  - image
+  - language
+  - link
+  - menu_link_content
+  - menu_ui
+  - mysql
+  - node
+  - options
+  - page_cache
+  - path
+  - path_alias
+  - rdf
+  - rest
+  - serialization
+  - system
+  - taxonomy
+  - telephone
+  - text
+  - toolbar
+  - tour
+  - update
+  - user
+  - views
+  - views_ui
+
+  # Contrib modules.
+  - admin_toolbar
+  - admin_toolbar_links_access_filter
+  - admin_toolbar_tools
+  - better_exposed_filters
+  - chosen
+  - chosen_lib
+  - ckeditor_details
+  - config_filter
+  - config_ignore
+  - config_split
+  - contact_block
+  - csv_serialization
+  - ctools
+  - datetimehideseconds
+  - entity_reference_exposed_filters
+  - entity_reference_revisions
+  - field_group
+  - flag
+  - flag_conditional_confirm
+  - fontawesome_iconpicker
+  - fontawesome_iconpicker_enhanced
+  - honeypot
+  - jquery_ui
+  - jquery_ui_datepicker
+  - jquery_ui_slider
+  - jquery_ui_touch_punch
+  - link_attributes
+  - masquerade
+  - maxlength
+  - metatag
+  - pathauto
+  - queue_mail
+  - queue_mail_language
+  - rabbit_hole
+  - realname
+  - redirect
+  - rh_taxonomy
+  - roleassign
+  - smart_trim
+  - token
+  - views_ajax_history
+  - views_bulk_operations
+  - views_data_export
+
+  # Custom
+  - muser_system
+  - muser_project
+  - muser_user
+
+# Required themes.
+themes:
+  - classy
+  - muser_base
+  - claro
+  - stable

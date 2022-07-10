@@ -1,0 +1,7 @@
+name: JBC Icon Picker
+type: module
+description: Customized version of the Fontawesome Icon Picker.
+core_version_requirement: 8.x || 9.x
+package: Custom
+dependencies:
+  - fontawesome_iconpicker:fontawesome_iconpicker

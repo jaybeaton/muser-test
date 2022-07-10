@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Compensation
+vid: compensation
+description: 'The compensation given for projects.'
+weight: 0

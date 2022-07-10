@@ -1,0 +1,41 @@
+<h3>{{ title }}</h3>
+<h4>{{ mentor_title }}</h4>
+<ul>
+    <li class="{{ dates.field_post_projects.start.class }}">
+        {{ dates.field_post_projects.start.date }} - {{ dates.field_post_projects.start.text }}
+    </li>
+    <li class="{{ dates.field_post_projects.end.class }}">
+        {{ dates.field_post_projects.end.date }} - {{ dates.field_post_projects.end.text }}
+    </li>
+    <li class="{{ dates.field_accept_applications.start.class }}">
+        {{ dates.field_accept_applications.start.date }} - {{ dates.field_accept_applications.start.text }}
+    </li>
+    <li class="{{ dates.field_accept_applications.end.class }}">
+        {{ dates.field_accept_applications.end.date }} - {{ dates.field_accept_applications.end.text }}
+    </li>
+    {% if show_contract_dates == 1 %}
+    <li class="{{ dates.field_sign_contracts.start.class }}">
+        {{ dates.field_sign_contracts.start.date }} - {{ dates.field_sign_contracts.start.text }}
+    </li>
+    <li class="{{ dates.field_sign_contracts.end.class }}">
+        {{ dates.field_sign_contracts.end.date }} - {{ dates.field_sign_contracts.end.text }}
+    </li>
+    {% endif %}
+</ul>
+<h4>{{ student_title }}</h4>
+<ul>
+    <li class="{{ dates.field_apply.start.class }}">
+        {{ dates.field_apply.start.date }} - {{ dates.field_apply.start.text }}
+    </li>
+    <li class="{{ dates.field_apply.end.class }}">
+        {{ dates.field_apply.end.date }} - {{ dates.field_apply.end.text }}
+    </li>
+    {% if show_contract_dates %}
+    <li class="{{ dates.field_sign_contracts.start.class }}">
+      {{ dates.field_sign_contracts.start.date }} - {{ dates.field_sign_contracts.start.text }}
+    </li>
+    <li class="{{ dates.field_sign_contracts.end.class }}">
+      {{ dates.field_sign_contracts.end.date }} - {{ dates.field_sign_contracts.end.text }}
+    </li>
+    {% endif %}
+</ul>

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - muser_user
+    - system
+    - user
+  theme:
+    - muser_base
+id: muserapplicationcountblock
+theme: muser_base
+region: content
+weight: -10
+provider: null
+plugin: muser_application_count
+settings:
+  id: muser_application_count
+  label: 'Muser application count block'
+  label_display: '0'
+  provider: muser_user
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/student/*/applications\r\n/projects"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      student: student
