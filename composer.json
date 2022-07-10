@@ -13,6 +13,52 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "npm-asset/fontawesome-iconpicker",
+                "version": "v3.3.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "fontawesome-iconpicker"
+                },
+                "dist": {
+                    "url": "https://github.com/seanbeaton/fontawesome-iconpicker/archive/3.3.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "fortawesome/font-awesome5",
+                "version": "v5.15.4",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/FortAwesome/Font-Awesome/archive/5.15.4.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/fontawesome_iconpicker_enhanced",
+                "version": "1.x-dev",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/seanbeaton/fontawesome_iconpicker_enhanced.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
     "require": {
